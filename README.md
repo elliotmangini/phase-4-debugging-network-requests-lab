@@ -62,12 +62,16 @@ developing your own process.
 
 - Add a new toy when the toy form is submitted
 
-  - How I debugged:
+  - How I debugged: I added a byebug in the create method and figured out Toys needed to be changed to Toy
 
 - Update the number of likes for a toy
 
-  - How I debugged:
+  - How I debugged: rails s said :id wasnt permitted, then got the error that means json isnt being returned, added render json: to that method
 
 - Donate a toy to Goodwill (and delete it from our database)
 
   - How I debugged:
+
+ActionController::RoutingError (No route matches [DELETE] "/toys/1"):
+
+add :destroy to routes
